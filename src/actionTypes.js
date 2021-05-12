@@ -4,7 +4,7 @@ const requestDog = () => {
   };
   
   const requestDogSuccess = (data) => {
-    return { type: 'REQUESTED_DOG_SUCCEEDED', url: data.message }
+    return { type: 'REQUESTED_DOG_SUCCEEDED', data: data.message }
   };
   
   const requestDogError = () => {

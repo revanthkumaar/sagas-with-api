@@ -1,10 +1,13 @@
 import {delay} from 'redux-saga/effects';
 import {takeEvery, put} from 'redux-saga/effects'
 
-
+//put - triggers actions (dispatch())
+//takeEvery (reassign the task of acton)
 
 function* watchFetchDog(){
     yield takeEvery('FETCHED_DOG',fetchDogAsync)
+
+    //takeEvery('action to watch',which function you want to trigger)
 }
 
 function* fetchDogAsync(){

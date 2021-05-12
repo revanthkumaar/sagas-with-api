@@ -1,5 +1,5 @@
 const initialState = {
-    url:'',
+    data:'',
     loading:false,
     error:false
 }
@@ -8,20 +8,20 @@ const reducer = (state = initialState, action) => {
     switch(action.type){
         case 'REQUESTED_DOG':
             return {
-                url:'',
+                data:'',
                 loading:true,
                 error:false
             }
 
         case 'REQUESTED_DOG_SUCCEEDED':
             return{
-                url:action.url,
+                data:action.data,
                 loading:false,
                 error:false
             }
         case 'REQUESTED_DOG_FAILED':
             return{
-                url:'',
+                data:'',
                 loading:false,
                 error:true
             }
